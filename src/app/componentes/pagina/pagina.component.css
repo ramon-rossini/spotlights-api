@@ -14,5 +14,52 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: darkgray;
+    background: rgba(255, 255, 255, 0.1);
   }
+
+.homepage-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exemplo-logo {
+    margin-top: 2rem;
+    width: 20rem;
+    height: 5rem;
+    background: darkgray;
+}
+
+.exemplo-bordao {
+    color: darkgray;
+    font-size: large;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.box {
+    width: 23rem;
+    height: 35rem;
+    background: darkgray;
+}
+
+.exemplo-botao {
+    margin-top: 2rem;
+    width: 23rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    background: darkgray;
+}
+
+.botao-texto {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
