@@ -35,24 +35,30 @@
 
     </nav>
 
-    <section class="bg-light rounded mt-2 px-3">
+    <section class="bg-dark rounded mt-2 px-3">
         <h2 class="text-muted">Top 10</h2>
-        <!-- Carrossel -->
-        <div id="demo" class="carousel slide" data-ride="carousel">
-            <!-- Indicadores -->
-            <ul class="carousel-indicators">
-                <li></li>
+
+        <div id="CarrosselTop10" class="carousel slide" data-ride="carousel"> <!-- Carrossel -->
+            <ul class="carousel-indicators"> <!-- Indicadores -->
+                <li data-target="#CarrosselTop10" data-slide-to="0" class="active"></li>
+                <li data-target="#CarrosselTop10" data-slide-to="1"></li>
             </ul>
-
-            <!-- Slides -->
-            <div class="pb-1">
-                <img src="\assets\images\Exemplo-Poster-Filme.png" height="500px">
+            <div class="carousel-inner"> <!-- Slides -->
+                <div class="carousel-item active pb-3">
+                    <img class="d-block me-3" src="\assets\images\Exemplo-Poster-Filme.png" height="500px">
+                </div>
+                <div class="carousel-item pb-3">
+                    <img class="d-block me-3" src="\assets\images\Exemplo-Poster-Filme.png" height="500px">
+                </div>
             </div>
-
-            <a>
-                <span></span>
+            <a class="carousel-control-prev" href="#CarrosselTop10" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                
             </a>
-
+            <button class="carousel-control-prev" type="button" data-target="#CarrosselTop10" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
         </div>
 
     </section>
