@@ -1,3 +1,39 @@
+<div class="modal fade" id="ModalLogin" aria-hidden="true" aria-labelledby="modalLoginTitulo" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLoginTitulo">Login</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="email" placeholder="email"> <br>
+                    <input type="password" placeholder="senha">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-bs-target="#ModalCadastro" data-bs-toggle="modal">Cadastre-se</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ModalCadastro" aria-hidden="true" aria-labelledby="modalCadastroTitulo" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCadastroTitulo">Cadastro</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                segundo modal
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-bs-target="#ModalLogin" data-bs-toggle="modal">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <header class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-2 rounded-bottom bg-white">
         <a class="d-flex align-items-center col-md-3 mb-3 mb-md-0 text-dark text-decoration-none" href="#">
@@ -9,9 +45,9 @@
                 <input type="search" class="form-control" placeholder="Pesquisar" aria-label="Search">
             </form>
         </div>
-        <div class="col-md-3 text-end">
-            <button class="btn btn-outline-dark me-2">Login</button>
-            <button class="btn btn-dark">Cadastre-se</button>
+        <div class="col-md-3 text-end"> <!-- Botões login e cadastro -->
+            <a class="btn btn-outline-dark me-2" data-bs-toggle="modal" href="#ModalLogin" role="button">Login</a>
+            <a class="btn btn-dark" data-bs-toggle="modal" href="#ModalCadastro" role="button">Cadastre-se</a>
         </div>
     </header>
 </div>
