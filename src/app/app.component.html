@@ -1,34 +1,47 @@
-<div class="modal fade" id="ModalLogin" aria-hidden="true" aria-labelledby="modalLoginTitulo" tabindex="-1">
+<div class="modal fade" id="ModalLogin">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalLoginTitulo">Login</h5>
-                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header justify-content-center"> <!-- Cabeçalho do Modal -->
+                <h4 class="modal-title">Login</h4>
             </div>
-            <div class="modal-body">
-                <form>
-                    <input type="email" placeholder="email"> <br>
-                    <input type="password" placeholder="senha">
+            <div class="modal-body"> <!-- Conteúdo do Modal -->
+                <form class="d-flex flex-column" name="formLogin" id="formLogin">
+                    <input class="form-control mb-1" type="text" name="usunome" id="usunome" placeholder="nome">
+                    <input class="form-control mb-1" type="password" name="ususenha" id="ususenha" placeholder="senha">
+                    <button class="btn btn-primary btn-block" type="submit">Login</button>
                 </form>
+                <div class="d-flex flex-column align-items-center mt-2">
+                    <div>ou</div>
+                    <button class="btn" data-bs-target="#ModalCadastro" data-bs-toggle="modal">Cadastre-se</button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn" data-bs-target="#ModalCadastro" data-bs-toggle="modal">Cadastre-se</button>
+            <div class="modal-footer"> <!-- Rodapé do Modal -->
+                <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="ModalCadastro" aria-hidden="true" aria-labelledby="modalCadastroTitulo" tabindex="-1">
+
+<div class="modal fade" id="ModalCadastro" aria-hidden="true" aria-labelledby="modalCadastro" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalCadastroTitulo">Cadastro</h5>
-                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header justify-content-center"> <!-- Header -->
+                <h4 class="modal-title">Cadastro</h4>
             </div>
             <div class="modal-body">
-                segundo modal
+                <form class="d-flex flex-column" name="formCadastro" id="formCadastro" method="post" action="cadastrar.php">
+                    <input class="form-control mb-1" type="text" name="txtnome" id="txtnome" placeholder="nome">
+                    <input class="form-control mb-1" type="password" name="txtsenha" id="txtsenha" placeholder="senha">
+                    <button class="btn btn-primary btn-block" type="button" onclick="enviarCadastro()">Cadastre-se</button>
+                </form>
+                <div class="d-flex flex-column align-items-center mt-2">
+                    <div>ou</div>
+                    <button class="btn" data-bs-target="#ModalLogin" data-bs-toggle="modal">Fazer Login</button>
+                    <div id="mensagem"></div>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn" data-bs-target="#ModalLogin" data-bs-toggle="modal">Login</button>
+            <div class="modal-footer"> <!-- Footer -->
+                <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>
