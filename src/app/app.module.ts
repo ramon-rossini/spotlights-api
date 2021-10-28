@@ -1,22 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PaginaComponent } from './componentes/pagina/pagina.component';
 import { HomepageComponent } from './componentes/homepage/homepage.component';
+import { HeaderComponent } from './componentes/header/header.component';
+
+import { UsuariosService } from './usuarios.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaginaComponent,
-    HomepageComponent
+    HomepageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    HttpClientModule,
+    UsuariosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
