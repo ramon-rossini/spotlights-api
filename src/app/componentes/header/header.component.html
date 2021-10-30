@@ -29,10 +29,13 @@
                 <h4 class="modal-title">Cadastro</h4>
             </div>
             <div class="modal-body">
-                <form class="d-flex flex-column" name="formCadastro" id="formCadastro" method="post" action="cadastrar.php">
-                    <input class="form-control mb-1" type="text" name="txtnome" id="txtnome" placeholder="nome">
-                    <input class="form-control mb-1" type="password" name="txtsenha" id="txtsenha" placeholder="crie uma senha">
-                    <button class="btn btn-primary btn-block" type="button" onclick="enviarCadastro()">Cadastre-se</button>
+                <form class="d-flex flex-column" [formGroup]="myForm" id="formCadastro">
+                    <input class="form-control mb-1" type="text" name="txtnome" id="nome" placeholder="nome" required>
+                    <input class="form-control mb-1" type="email" name="txtemail" id="email" placeholder="email" required>
+                    <input class="form-control mb-1" type="password" formControlName="password" id="senha" placeholder="crie uma senha" required>
+                    <input class="form-control mb-1" type="password" formControlName="confirmPassword" placeholder="confirme a senha" required>
+                    <p *ngIf="myForm.errors?.valuesDoNotMatch">As senhas não coincidem</p>
+                    <button class="btn btn-primary btn-block" type="submit">Cadastre-se</button>
                 </form>
                 <div class="d-flex flex-column align-items-center mt-2">
                     <div>ou</div>
@@ -41,20 +44,30 @@
                 </div>
             </div>
             <div class="modal-footer"> <!-- Footer -->
+                {{myForm.valid}}
                 <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>
 </div>
 
-<!--
+
 <div class="container bg-white mb-5">
 <h2>Cadastrar Usuario</h2>
 <hr>
-<form>
-    <p>Nome: <input type="text" name="nome" [(ngModel)]="usuario.nome"></p>
-    <p>Idade: <input type="number" name="idade" [(ngModel)]="usuario.idade"></p>
-    <button type="button" (click)="cadastrar()">Cadastrar</button>
+<form class="needs-validation" novalidate>
+    <div>
+        <label for="validationCustom01" class="form-label">Nome</label> 
+        <input type="text" class="form-control is-valid" id="validationCustom01" name="name" [(ngModel)]="usuario.nome" required>
+        <div class="invalid-feedback">
+            nem
+          </div>
+    </div>
+    <div>
+        <label for="validationCustom02" class="form-label">Idade</label>
+        <input type="number" class="form-control" id="validationCustom02" name="idade" [(ngModel)]="usuario.idade">
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="cadastrar()">Cadastrar</button>
 </form>
 <h2>Usuarios Cadastrados</h2>
 <hr>
@@ -76,7 +89,7 @@
     </tr>
 </table>
 </div>
--->
+
 
 <div class="container">
     <header class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-2 rounded-bottom bg-white">
