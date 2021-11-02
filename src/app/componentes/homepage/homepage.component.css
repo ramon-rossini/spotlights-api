@@ -2,3 +2,7 @@
     cursor: pointer;
     max-width: 24%;
 }
+
+.img-conteudo {
+    max-width: 100%;
+}

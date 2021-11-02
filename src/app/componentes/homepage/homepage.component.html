@@ -1,11 +1,55 @@
 <div class="modal fade" id="ModalConteudo">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-
+                Nome da obra
             </div>
             <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col"> <!-- Imagem -->
+                        <img class="img-fluid rounded img-conteudo" src="\assets\images\Exemplo-Poster-Filme.png">
+                    </div>
+                    <div class="col-9"> <!-- Informações -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="border border-secondary mb-3">
+                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnSinopse" autocomplete="off" checked>
+                                        <label class="btn btn-outline-secondary rounded-0" for="btnSinopse">Sinopse</label>
 
+                                        <input class="btn-check" type="radio" name="btnradio" id="btnElenco" autocomplete="off">
+                                        <label class="btn btn-outline-secondary" for="btnElenco">Elenco</label>
+
+                                        <input class="btn-check" type="radio" name="btnradio" id="btnProducao" autocomplete="off">
+                                        <label class="btn btn-outline-secondary rounded-0" for="btnProducao">Produção</label>
+                                    </div>
+                                    <div>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus nobis explicabo nesciunt atque! Eius, incidunt. Cumque tempora impedit enim dicta esse, dolores vel aperiam sequi eligendi veniam necessitatibus nulla.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsa praesentium quasi, sit quis dolore quidem cum voluptatibus et libero consequuntur necessitatibus reprehenderit. Quibusdam reiciendis quos in facilis quisquam debitis.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col">
+                                    <div class="d-flex justify-content-evenly">
+                                        <button class="btn btn-outline-secondary rounded-pill" data-bs-toggle="button">visto</button>
+                                        <button class="btn btn-outline-secondary rounded-pill" data-bs-toggle="button">vendo</button>
+                                        <button class="btn btn-outline-secondary rounded-pill" data-bs-toggle="button">quero ver</button>
+                                        <button class="btn btn-outline-secondary rounded-pill" data-bs-toggle="button">abandonei</button>
+                                        <button class="btn btn-outline-secondary rounded-pill" data-bs-toggle="button">guilty pleasure</button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="border border-secondary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptate, tempora dolor vel itaque, maiores ex, nulla tenetur nisi deleniti laboriosam earum quo totam quaerat quidem iusto ducimus quod deserunt.
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Fechar</button>
@@ -48,7 +92,7 @@
 
     <section class="bg-white rounded mt-2 px-3">
 
-        <h2 class="text-muted pt-3">TOP 10</h2>
+        <h2 class="text-muted fw-bolder pt-3">TOP 10</h2>
         <div id="CarouselTop10" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#CarouselTop10" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -58,7 +102,7 @@
             <div class="carousel-inner pb-3">
                 <div class="carousel-item text-center active">
                     <img class="img-fluid pe-auto img-top10" src="\assets\images\Exemplo-Poster-Filme.png" onclick="teste()">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
+                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png" href="#ModalConteudo" data-bs-toggle="modal">
                     <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
                     <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
                 </div>
@@ -75,17 +119,17 @@
                     <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#CarouselTop10" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#CarouselTop10" data-bs-slide="prev" data-bs-toggle="tooltip" data-bs-placement="top" title="Voltar">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#CarouselTop10" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#CarouselTop10" data-bs-slide="next" data-bs-toggle="tooltip" data-bs-placement="top" title="Avançar">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Próximo</span>
             </button>
         </div>
 
-        <h2 class="text-muted pt-3">LANÇAMENTOS</h2>
+        <h2 class="text-muted fw-bolder pt-3">LANÇAMENTOS</h2>
         <div id="CarouselLancamentos" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#CarouselLancamentos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
