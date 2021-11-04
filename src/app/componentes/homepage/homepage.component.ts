@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  filme:string = "nome do filme"
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

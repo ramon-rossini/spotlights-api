@@ -13,12 +13,12 @@ export class UsuariosService {
 
   constructor( private http: HttpClient ) { }
 
-  cadastrarUsuario(usuario: UsuarioModel): Observable<any> {
-    return this.http.post(environment.apiUrl, usuario);
-  }
-
   listarUsuarios() : Observable<any>{
     return this.http.get(environment.apiUrl);
+  }
+
+  cadastrarUsuario(usuario: UsuarioModel): Observable<any> {
+    return this.http.post(environment.apiUrl, usuario);
   }
 
   atualizarUsuario(id: any, usuario: UsuarioModel) : Observable<any>{
