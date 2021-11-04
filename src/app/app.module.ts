@@ -9,12 +9,16 @@ import { HomepageComponent } from './componentes/homepage/homepage.component';
 import { HeaderComponent } from './componentes/header/header.component';
 
 import { UsuariosService } from './usuarios.service';
+import { LoginComponent } from './componentes/login/login.component';
+import { CadastroComponent } from './componentes/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

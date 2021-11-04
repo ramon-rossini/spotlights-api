@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://localhost:3000/usuarios/"
+  apiUrl: "http://localhost:3000/usuariosCadastrados/"
 };
 
 /*

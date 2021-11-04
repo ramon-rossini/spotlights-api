@@ -1,0 +1,13 @@
+.card-registro {
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fonte-fundo {
+    color: rgb(50, 50, 50);
+}
