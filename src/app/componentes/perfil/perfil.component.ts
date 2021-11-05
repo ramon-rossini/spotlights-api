@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { FormGroup, FormBuilder, AbstractControl, ValidatorFn, ValidationErrors } from '@angular/forms';
 
+import { UsuarioModel } from '../header/usuario.model';
 import { UsuariosService } from 'src/app/usuarios.service';
-import { UsuarioModel } from './usuario.model';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-perfil',
+  templateUrl: './perfil.component.html',
+  styleUrls: ['./perfil.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class PerfilComponent implements OnInit {
 
   substituir = {
-    nome: "Usuario",
+    nome: "Minguel",
     email: "otario@email.com"
   }
 

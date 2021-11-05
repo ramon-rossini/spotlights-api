@@ -11,6 +11,7 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { UsuariosService } from './usuarios.service';
 import { LoginComponent } from './componentes/login/login.component';
 import { CadastroComponent } from './componentes/cadastro/cadastro.component';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CadastroComponent } from './componentes/cadastro/cadastro.component';
     HomepageComponent,
     HeaderComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
