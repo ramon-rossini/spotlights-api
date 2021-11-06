@@ -12,6 +12,7 @@ import { UsuariosService } from './usuarios.service';
 import { LoginComponent } from './componentes/login/login.component';
 import { CadastroComponent } from './componentes/cadastro/cadastro.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { AdminComponent } from './componentes/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PerfilComponent } from './componentes/perfil/perfil.component';
     HeaderComponent,
     LoginComponent,
     CadastroComponent,
-    PerfilComponent
+    PerfilComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
