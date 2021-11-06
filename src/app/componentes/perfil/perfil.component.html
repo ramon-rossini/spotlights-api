@@ -1,14 +1,12 @@
 <div class="container">
 
     <section class="bg-white rounded mt-2 px-3">
-        <h1>Perfil</h1>
-
-        <h2>Cadastrar Usuario</h2>
+        <h1 class="pt-3">Perfil</h1>
         <hr>
-        <form class="needs-validation" novalidate>
+        <form>
             <div>
                 <label for="validationCustom01" class="form-label">Nome</label> 
-                <input type="text" class="form-control is-valid" id="validationCustom01" name="name" [(ngModel)]="usuario.nome" required>
+                <input type="text" class="form-control" id="validationCustom01" name="name" [(ngModel)]="usuario.nome" value="nome">
                 <div class="invalid-feedback">
                     nem
                 </div>

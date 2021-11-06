@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { environment } from 'src/environments/environment';
@@ -18,9 +18,9 @@ export class CadastroComponent implements OnInit {
 
   ngOnInit(): void {
     this.cadastroForm = this.formBuilder.group({
-      nome:[''],
-      email:[''],
-      senha:['']
+      nome:['', Validators.required],
+      email:['', Validators.required],
+      senha:['', Validators.required]
     })
   }
 
@@ -29,7 +29,8 @@ export class CadastroComponent implements OnInit {
       alert('Cadastro realizado');
       this.cadastroForm.reset();
       this.router.navigate(['login']);
-    }, err=>{
+      console.log(this.cadastroForm.value)
+    }, err => {
       alert('Erro ao cadastrar')
     })
   }
