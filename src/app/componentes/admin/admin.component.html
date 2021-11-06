@@ -1,1 +1,65 @@
-<p>admin works!</p>
+<div class="container">
+
+    <section class="bg-white rounded mt-2 p-3">
+
+        <h1 class="mb-3">Usuários</h1>
+
+        <h4>Busca</h4>
+        <div class="border border-dark border-2 rounded p-3 mb-4 text-center">
+            <form class="">
+                <label class="mx-2" for="buscaID">ID:</label>
+                <input type="text" id="buscaID" placeholder="informe o ID">
+                <button class="btn btn-dark mx-2">Buscar</button>
+            </form>
+        </div>
+
+        <h4>Cadastrados</h4>
+        <div class="table-responsive border border-dark rounded border-2 mb-4">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Senha</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of usuarios">
+                        <th>{{usuario.id}}</th>
+                        <td>{{usuario.nome}}</td>
+                        <td>{{usuario.email}}</td>
+                        <td>{{usuario.senha}}</td>
+                        <td>
+                            <button class="btn btn-primary" style="margin-right: 0.5em;"
+                                (click)="atualizar(usuario.id)">Atualizar</button>
+                            <button class="btn btn-danger" (click)="remover(usuario.id)">Remover</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Cadastrar</h4>
+        <div class="border border-dark rounded border-2 mb-4 p-3">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label" for="nome">Nome</label>
+                    <input class="form-control" type="text" id="nome" name="name" [(ngModel)]="usuario.nome" value="nome">
+                    </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fonte-fundo">Endereço de E-mail</label>
+                    <input class="form-control" type="email" id="exampleInputEmail1" formControlName="email">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="senha">Senha</label>
+                    <input class="form-control" type="password" id="senha" formControlName="senha">
+                </div>
+                <button class="btn btn-primary" type="submit" (click)="cadastrar()">Cadastrar</button>
+            </form>
+        </div>
+
+    </section>
+
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './componentes/admin/admin.component';
 
 import { CadastroComponent } from './componentes/cadastro/cadastro.component';
 import { HeaderComponent } from './componentes/header/header.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
     { path:'', redirectTo:'conteudo', pathMatch:'full'},
     { path:'conteudo', component:HomepageComponent },
     { path:'perfil', component:PerfilComponent },
+    { path:'admin', component:AdminComponent },
   ] },
 ];
 

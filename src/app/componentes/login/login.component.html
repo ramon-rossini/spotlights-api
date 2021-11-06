@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div class="card card-registro">
+            <div class="card card-registro shadow">
                 <div class="text-center">
                     <h1 class="fonte-fundo">Login</h1>
                     <h6 class="fonte-fundo">Entre com seu e-mail e senha</h6>
@@ -10,7 +10,7 @@
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label fonte-fundo">Endereço de E-mail</label>
                       <input class="form-control" type="email" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
-                      <div id="emailHelp" class="form-text">Nunca iremos compartilhar seu e-mail com ninguém</div><br>
+                      <div id="emailHelp" class="form-text">Nunca iremos compartilhar seu e-mail com ninguém</div>
                       <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*E-mail é obrigatório</span>
                     </div>
                     <div class="mb-3">
