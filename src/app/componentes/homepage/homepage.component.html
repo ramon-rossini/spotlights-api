@@ -1,58 +1,231 @@
 <!-- MODAL FILMES/SÉRIES -->
-<div class="modal fade" id="ModalConteudo">
+<div class="modal fade" id="ModalAdventure">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                {{filme}}
+                <h1>Hora de Aventura: Terras Distantes</h1>
             </div>
             <div class="modal-body">
                 <div class="row mb-3">
-                    <div class="col"> <!-- Imagem -->
-                        <img class="img-fluid rounded img-conteudo" src="\assets\images\Exemplo-Poster-Filme.png">
+                    <div class="col">
+                        <!-- Imagem -->
+                        <img class="img-fluid rounded img-conteudo" src="\assets\images\posters\adventure-time.jpg">
                     </div>
-                    <div class="col-9"> <!-- Informações -->
+                    <div class="col-9">
+                        <!-- Informações -->
                         <div class="row">
                             <div class="col">
-                                <div class="border border-secondary mb-3">
-                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnSinopse" autocomplete="off" checked>
-                                        <label class="btn btn-outline-secondary rounded-0" for="btnSinopse">Sinopse</label>
+                                <div class="border border-secondary rounded mb-3">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                                data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                                aria-selected="true"><strong>Sinopse</strong></button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                                data-bs-target="#profile" type="button" role="tab"
+                                                aria-controls="profile"
+                                                aria-selected="false"><strong>Elenco</strong></button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                                data-bs-target="#contact" type="button" role="tab"
+                                                aria-controls="contact"
+                                                aria-selected="false"><strong>Produção</strong></button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active p-3 aba-conteudo" id="home"
+                                            role="tabpanel" aria-labelledby="home-tab">
+                                            A HBO Max está nos levando de volta à Terra de Ooo com quatro novos
+                                            especiais do Hora de Aventura, chamados de Adventure Time: Distant Lands; os
+                                            episódios de uma hora e meia reunirão os fãs com personagens da série
+                                            original, que encerrou sua exibição de 10 temporadas no Cartoon Network em
+                                            2018.
+                                        </div>
+                                        <div class="tab-pane fade p-3 aba-conteudo" id="profile" role="tabpanel"
+                                            aria-labelledby="profile-tab">
+                                            <strong>Jeremy Shada</strong> (Finn) <br>
+                                            <strong>Olivia Olson</strong> (Marceline) <br>
+                                            <strong>John DiMaggio</strong> (Jake) <br>
+                                            <strong>Tom Kenny</strong> (Rei Gelado) <br>
+                                            <strong>Steve Little</strong> (Mordomo Menta)
+                                        </div>
+                                        <div class="tab-pane fade p-3 aba-conteudo" id="contact" role="tabpanel"
+                                            aria-labelledby="contact-tab">
+                                            <strong>Adam Muto</strong> (Produtor Executivo) (4 episódios, 2020-2021)
+                                            <br>
+                                            <strong>Scott Malchus</strong> (Produtor) (3 episódios, 2020-2021) <br>
+                                            <strong>Fred Seibert</strong> (Produtor Executivo) (3 episódios, 2020-2021)
+                                            <br>
+                                            <strong>Brian A. Miller</strong> (Produtor Executivo) (1 episódio, 2020)
+                                            <br>
+                                            <strong>Jennifer Pelphrey</strong> (Produtor Executivo) (1 episódio, 2020)
+                                            <br>
+                                            <strong>Rob Sorcher</strong> (Produtor Executivo) (1 episódio, 2020) <br>
+                                            <strong>Tramm Wigzell</strong> (Produtor Executivo) (1 episódio, 2020) <br>
+                                            <br>
 
-                                        <input class="btn-check" type="radio" name="btnradio" id="btnElenco" autocomplete="off">
-                                        <label class="btn btn-outline-secondary" for="btnElenco">Elenco</label>
-
-                                        <input class="btn-check" type="radio" name="btnradio" id="btnProducao" autocomplete="off">
-                                        <label class="btn btn-outline-secondary rounded-0" for="btnProducao">Produção</label>
-                                    </div>
-                                    <div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus nobis explicabo nesciunt atque! Eius, incidunt. Cumque tempora impedit enim dicta esse, dolores vel aperiam sequi eligendi veniam necessitatibus nulla.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsa praesentium quasi, sit quis dolore quidem cum voluptatibus et libero consequuntur necessitatibus reprehenderit. Quibusdam reiciendis quos in facilis quisquam debitis.
+                                            Músicas da série por: <br>
+                                            <strong>Amanda Delores Patricia Jones</strong> (2 episódios, 2020-2021) <br>
+                                            <strong>Timothy Kiefer</strong> (1 episódio, 2020)
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                                <div class="col">
-                                    <div class="d-flex justify-content-evenly">
-                                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
-                                        <label class="btn btn-outline-secondary rounded-pill" for="option1">visto</label>
-                                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                                        <label class="btn btn-outline-secondary rounded-pill" for="option2">vendo</label>
-                                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                                        <label class="btn btn-outline-secondary rounded-pill" for="option3">quero ver</label>
-                                        <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-                                        <label class="btn btn-outline-secondary rounded-pill" for="option4">abandonei</label>
-                                        <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
-                                        <label class="btn btn-outline-secondary rounded-pill" for="option5">guilty pleasure</label>
-                                    </div>
+                            <div class="col">
+                                <div class="d-flex justify-content-evenly">
+                                    <input type="radio" class="btn-check" name="options" id="option1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill" for="option1">visto</label>
+                                    <input type="radio" class="btn-check" name="options" id="option2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill" for="option2">vendo</label>
+                                    <input type="radio" class="btn-check" name="options" id="option3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill" for="option3">quero
+                                        ver</label>
+                                    <input type="radio" class="btn-check" name="options" id="option4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill"
+                                        for="option4">abandonei</label>
+                                    <input type="radio" class="btn-check" name="options" id="option5"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill" for="option5">guilty
+                                        pleasure</label>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="border border-secondary">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptate, tempora dolor vel itaque, maiores ex, nulla tenetur nisi deleniti laboriosam earum quo totam quaerat quidem iusto ducimus quod deserunt.
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here"
+                                id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea shadow">Diga o que achou...</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalInterestellar">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Interestelar</h1>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col">
+                        <!-- Imagem -->
+                        <img class="img-fluid rounded img-conteudo" src="\assets\images\posters\interestellar.jpg">
+                    </div>
+                    <div class="col-9">
+                        <!-- Informações -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="border border-secondary rounded mb-3">
+                                    <ul class="nav nav-tabs" id="abaInterestellar" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="sinopse-tab" data-bs-toggle="tab"
+                                                data-bs-target="#sinopse" type="button" role="tab" aria-controls="sinopse"
+                                                aria-selected="true"><strong>Sinopse</strong></button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="elenco-tab" data-bs-toggle="tab"
+                                                data-bs-target="#elenco" type="button" role="tab"
+                                                aria-controls="elenco"
+                                                aria-selected="false"><strong>Elenco</strong></button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="producao-tab" data-bs-toggle="tab"
+                                                data-bs-target="#producao" type="button" role="tab"
+                                                aria-controls="producao"
+                                                aria-selected="false"><strong>Produção</strong></button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="abaInterestellarContent">
+                                        <div class="tab-pane fade show active p-3 aba-conteudo" id="sinopse"
+                                            role="tabpanel" aria-labelledby="sinopse-tab">
+                                            A HBO Max está nos levando de volta à Terra de Ooo com quatro novos
+                                            especiais do Hora de Aventura, chamados de Adventure Time: Distant Lands; os
+                                            episódios de uma hora e meia reunirão os fãs com personagens da série
+                                            original, que encerrou sua exibição de 10 temporadas no Cartoon Network em
+                                            2018.
+                                        </div>
+                                        <div class="tab-pane fade p-3 aba-conteudo" id="elenco" role="tabpanel"
+                                            aria-labelledby="elenco-tab">
+                                            <strong>Jeremy Shada</strong> (Finn) <br>
+                                            <strong>Olivia Olson</strong> (Marceline) <br>
+                                            <strong>John DiMaggio</strong> (Jake) <br>
+                                            <strong>Tom Kenny</strong> (Rei Gelado) <br>
+                                            <strong>Steve Little</strong> (Mordomo Menta)
+                                        </div>
+                                        <div class="tab-pane fade p-3 aba-conteudo" id="producao" role="tabpanel"
+                                            aria-labelledby="producao-tab">
+                                            <strong>Adam Muto</strong> (Produtor Executivo) (4 episódios, 2020-2021)
+                                            <br>
+                                            <strong>Scott Malchus</strong> (Produtor) (3 episódios, 2020-2021) <br>
+                                            <strong>Fred Seibert</strong> (Produtor Executivo) (3 episódios, 2020-2021)
+                                            <br>
+                                            <strong>Brian A. Miller</strong> (Produtor Executivo) (1 episódio, 2020)
+                                            <br>
+                                            <strong>Jennifer Pelphrey</strong> (Produtor Executivo) (1 episódio, 2020)
+                                            <br>
+                                            <strong>Rob Sorcher</strong> (Produtor Executivo) (1 episódio, 2020) <br>
+                                            <strong>Tramm Wigzell</strong> (Produtor Executivo) (1 episódio, 2020) <br>
+                                            <br>
+
+                                            Músicas da série por: <br>
+                                            <strong>Amanda Delores Patricia Jones</strong> (2 episódios, 2020-2021) <br>
+                                            <strong>Timothy Kiefer</strong> (1 episódio, 2020)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex justify-content-evenly">
+                                    <input type="radio" class="btn-check" name="options" id="option1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill" for="option1">visto</label>
+                                    <input type="radio" class="btn-check" name="options" id="option2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill" for="option2">vendo</label>
+                                    <input type="radio" class="btn-check" name="options" id="option3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill" for="option3">quero
+                                        ver</label>
+                                    <input type="radio" class="btn-check" name="options" id="option4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill"
+                                        for="option4">abandonei</label>
+                                    <input type="radio" class="btn-check" name="options" id="option5"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill" for="option5">guilty
+                                        pleasure</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here"
+                                id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea shadow">Diga o que achou...</label>
                         </div>
                     </div>
                 </div>
@@ -66,27 +239,31 @@
 
 <div class="container">
 
-    <section class="bg-white rounded mt-2 px-3">
+    <section class="bg-white rounded mt-2 mb-3 px-3">
 
         <h2 class="text-muted fw-bolder pt-3">TOP 10</h2>
         <div id="CarouselTop10" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#CarouselTop10" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#CarouselTop10" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#CarouselTop10" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#CarouselTop10" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#CarouselTop10" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#CarouselTop10" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner pb-3">
                 <div class="carousel-item text-center active">
-                    <img class="img-fluid pe-auto img-top10" src="\assets\images\Exemplo-Poster-Filme.png" onclick="teste()">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png" href="#ModalConteudo" data-bs-toggle="modal">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\stranger-things.jpg">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\adventure-time.jpg"
+                        href="#ModalAdventure" data-bs-toggle="modal">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\dune.jpg">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\breaking-bad.jpg">
                 </div>
                 <div class="carousel-item text-center">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\peaky-blinders.jpg">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\007-no-time-to-die.jpg">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\matrix-reloaded.jpg">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\senhor-dos-aneis.jpg">
                 </div>
                 <div class="carousel-item text-center">
                     <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
@@ -95,37 +272,43 @@
                     <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#CarouselTop10" data-bs-slide="prev" data-bs-toggle="tooltip" data-bs-placement="top" title="Voltar">
+            <button class="carousel-control-prev" type="button" data-bs-target="#CarouselTop10" data-bs-slide="prev"
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Voltar">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#CarouselTop10" data-bs-slide="next" data-bs-toggle="tooltip" data-bs-placement="top" title="Avançar">
+            <button class="carousel-control-next" type="button" data-bs-target="#CarouselTop10" data-bs-slide="next"
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Avançar">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Próximo</span>
             </button>
         </div>
 
         <h2 class="text-muted fw-bolder pt-3">LANÇAMENTOS</h2>
-        <div id="CarouselLancamentos" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel slide" id="CarouselLancamentos" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#CarouselLancamentos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#CarouselLancamentos" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#CarouselLancamentos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#CarouselLancamentos" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#CarouselLancamentos" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#CarouselLancamentos" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner pb-3">
                 <div class="carousel-item text-center active">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\back-to-the-future2.jpg">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\harry-potter.jpg">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\game-of-thrones.jpg">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\inception.jpg">
                 </div>
                 <div class="carousel-item text-center">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\free-guy.jpg">
                     <a href="#">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
+                        <img class="img-fluid img-top10" src="\assets\images\posters\arcane.jpg">
                     </a>
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
-                    <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\interestellar.jpg"
+                        href="#ModalInterestellar" data-bs-toggle="modal">
+                    <img class="img-fluid img-top10" src="\assets\images\posters\the-witcher.jpg">
                 </div>
                 <div class="carousel-item text-center">
                     <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
@@ -134,11 +317,13 @@
                     <img class="img-fluid img-top10" src="\assets\images\Exemplo-Poster-Filme.png">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#CarouselLancamentos" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#CarouselLancamentos"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#CarouselLancamentos" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#CarouselLancamentos"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Próximo</span>
             </button>

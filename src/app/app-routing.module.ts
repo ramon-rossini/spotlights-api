@@ -23,7 +23,6 @@ const routes: Routes = [
   {path:'listar-conteudo', component:ListarConteudoComponent},
   {path:'criar-conteudo', component:CriarConteudoComponent},
   {path:'editar-conteudo/:id', component:CriarConteudoComponent},
-  {path:'**', redirectTo:'', pathMatch:'full'},
 ];
 
 @NgModule({
