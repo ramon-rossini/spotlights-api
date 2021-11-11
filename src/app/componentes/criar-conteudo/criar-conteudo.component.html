@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulos">{{etiqueta | uppercase }}</span>
+                    <form class="mt-3" [formGroup]="conteudoForm" (ngSubmit)="criarConteudo()">
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" formControlName="titulo" placeholder="Título">
+                            <div class="text-danger" *ngIf="conteudoForm?.hasError('required','titulo') && conteudoForm.controls['titulo']?.dirty">
+                                <span>O título do conteúdo é obrigatório</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" formControlName="categoria" placeholder="Categoria">
+                            <div class="text-danger" *ngIf="conteudoForm?.hasError('required','categoria') && conteudoForm.controls['categoria']?.dirty">
+                                <span>A categoria do conteúdo é obrigatória</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" formControlName="idioma" placeholder="Idioma">
+                            <div class="text-danger" *ngIf="conteudoForm?.hasError('required','idioma') && conteudoForm.controls['idioma']?.dirty">
+                                <span>O idioma do conteúdo é obrigatório</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control form-control-lg" formControlName="imdb" placeholder="IMDB">
+                            <div class="text-danger" *ngIf="conteudoForm?.hasError('required','imdb') && conteudoForm.controls['imdb']?.dirty">
+                                <span>O imdb do conteúdo é obrigatório</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-danger btn-lg float-start" routerLink="/listar-conteudo">VOLTAR</button>
+                            <button class="btn btn-success btn-lg float-end" [disabled]="conteudoForm.invalid" type="submit">{{botao | uppercase}}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

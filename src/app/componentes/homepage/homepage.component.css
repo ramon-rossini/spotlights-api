@@ -1,0 +1,23 @@
+.img-top10 {
+    cursor: pointer;
+    width: 19rem;
+    height: 35rem;
+    object-fit: cover;
+    border: none;
+}
+
+.img-conteudo {
+    max-width: 100%;
+    width: 19rem;
+    height: 28rem;
+    object-fit: cover;
+    border: none;
+}
+
+.botao-conteudo-l {
+    border-radius: 4px 0px 0px 0px;
+}
+
+.aba-conteudo {
+    height: 20em;
+}

@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulos">LISTA DE CONTEÚDO</span>
+                    <button class="btn btn-success float-end" routerLink="/criar-conteudo">NOVO</button>
+                    <table class="table table-striped mt-4" *ngIf="listConteudos.length > 0">
+                        <thead>
+                          <tr>
+                            <th scope="col">Título</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Idioma</th>
+                            <th scope="col">IMDB</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let conteudo of listConteudos">
+                            <th>{{conteudo.titulo}}</th>
+                            <td>{{conteudo.categoria}}</td>
+                            <td>{{conteudo.idioma}}</td>
+                            <td>{{conteudo.imdb}}</td>
+                            <td>
+                                <i class="fas fa-edit text-primary" [routerLink]="['/editar-conteudo', conteudo._id]"></i>
+                                <i class="fas fa-trash text-danger" (click)="excluirConteudo(conteudo._id)"></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 *ngIf="listConteudos.length == 0">Não há conteúdo para mostrar</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

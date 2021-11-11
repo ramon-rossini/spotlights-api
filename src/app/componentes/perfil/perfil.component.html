@@ -1,0 +1,42 @@
+<div class="container">
+
+    <section class="bg-white rounded mt-2 px-3">
+        <h1 class="pt-3">Perfil</h1>
+        <hr>
+        <form>
+            <div>
+                <label for="validationCustom01" class="form-label">Nome</label> 
+                <input type="text" class="form-control" id="validationCustom01" name="name" [(ngModel)]="usuario.nome" value="nome">
+                <div class="invalid-feedback">
+                    nem
+                </div>
+            </div>
+            <div>
+                <label for="validationCustom02" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="validationCustom02" name="idade" [(ngModel)]="usuario.idade">
+            </div>
+            <button class="btn btn-primary" type="submit" (click)="cadastrar()">Cadastrar</button>
+        </form>
+        <h2>Usuarios Cadastrados</h2>
+        <hr>
+        <table>
+            <tr>
+                <th>#Id</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Ações</th>
+            </tr>
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{usuario.id}}</td>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.idade}}</td>
+                <td>
+                    <button (click)="atualizar(usuario.id)">Atualizar</button>
+                    <button (click)="remover(usuario.id)">Remover</button>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+</div>

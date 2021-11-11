@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card card-registro shadow">
+        <div class="text-center">
+          <h1 class="fonte-fundo">Cadastro</h1>
+          <h6 class="fonte-fundo">Registre-se com seu e-mail e senha</h6>
+        </div>
+        <form [formGroup]="cadastroForm" (ngSubmit)="cadastrar()">
+          <div class="mb-3">
+            <label for="exampleInputName1" class="form-label fonte-fundo">Nome e sobrenome</label>
+            <input class="form-control" type="text" id="exampleInputName1" formControlName="nome">
+            <span class="text-danger" *ngIf="cadastroForm.controls['nome'].dirty && cadastroForm.hasError('required','nome')">*Nome é obrigatório</span>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label fonte-fundo">Endereço de E-mail</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+            <div id="emailHelp" class="form-text">Nunca iremos compartilhar seu e-mail com ninguém</div>
+            <span class="text-danger" *ngIf="cadastroForm.controls['email'].dirty && cadastroForm.hasError('required','email')">*E-mail é obrigatório</span>
+            <span class="text-danger" *ngIf="cadastroForm.hasError('email','email')">*E-mail invalido</span>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label fonte-fundo">Senha</label>
+            <input class="form-control" type="password" id="exampleInputPassword1" formControlName="senha">
+            <span class="text-danger" *ngIf="cadastroForm.controls['senha'].dirty && cadastroForm.hasError('required','senha')">*Senha é obrigatória</span>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword2" class="form-label fonte-fundo">Confirme a senha</label>
+            <input class="form-control" type="password" id="exampleInputPassword2">
+        <!--<span class="text-danger" *ngIf="senhaForm.errors?.valuesDoNotMatch">As senhas não coincidem</span>-->
+          </div>
+          <button class="btn btn-primary" [disabled]="!cadastroForm.valid" type="submit">Cadastre-se</button>
+        </form>
+        <a class="mt-3" style="color: rgb(50, 50, 50);" routerLink="/login">ou faça login</a>
+      </div>
+    </div>
+  </div>
+</div>

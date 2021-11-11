@@ -1,0 +1,153 @@
+<div class="modal fade" id="ModalLogin" aria-hidden="true" aria-labelledby="ModalLogin" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center"> <!-- Cabeçalho do Modal -->
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body"> <!-- Conteúdo do Modal -->
+                <form class="d-flex flex-column" name="formLogin" id="formLogin">
+                    <input class="form-control mb-1" type="text" name="usunome" id="usunome" placeholder="nome">
+                    <input class="form-control mb-1" type="password" name="ususenha" id="ususenha" placeholder="senha">
+                    <button class="btn btn-primary btn-block" type="submit">Login</button>
+                </form>
+                <div class="d-flex flex-column align-items-center mt-2">
+                    <div>ou</div>
+                    <button class="btn" data-bs-target="#ModalCadastro" data-bs-toggle="modal">Cadastre-se</button>
+                </div>
+            </div>
+            <div class="modal-footer"> <!-- Rodapé do Modal -->
+                <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalCadastro" aria-hidden="true" aria-labelledby="modalCadastro" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center"> <!-- Header -->
+                <h4 class="modal-title">Cadastro</h4>
+            </div>
+            <div class="modal-body">
+                <form class="d-flex flex-column" [formGroup]="myForm" id="formCadastro">
+                    <input class="form-control mb-1" type="text" name="txtnome" id="nome" placeholder="nome" required>
+                    <input class="form-control mb-1" type="email" name="txtemail" id="email" placeholder="email" required>
+                    <input class="form-control mb-1" type="password" formControlName="password" id="senha" placeholder="crie uma senha" required>
+                    <input class="form-control mb-1" type="password" formControlName="confirmPassword" placeholder="confirme a senha" required>
+                    <p *ngIf="myForm.errors?.valuesDoNotMatch">As senhas não coincidem</p>
+                    <button class="btn btn-primary btn-block" type="submit">Cadastre-se</button>
+                </form>
+                <div class="d-flex flex-column align-items-center mt-2">
+                    <div>ou</div>
+                    <button class="btn" data-bs-target="#ModalLogin" data-bs-toggle="modal">Fazer Login</button>
+                    <div id="mensagem"></div>
+                </div>
+            </div>
+            <div class="modal-footer"> <!-- Footer -->
+                {{myForm.valid}}
+                <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TESTE -->
+<!--
+<div class="container bg-white mb-5">
+<h2>Cadastrar Usuario</h2>
+<hr>
+<form class="needs-validation" novalidate>
+    <div>
+        <label for="validationCustom01" class="form-label">Nome</label> 
+        <input type="text" class="form-control is-valid" id="validationCustom01" name="name" [(ngModel)]="usuario.nome" required>
+        <div class="invalid-feedback">
+            nem
+          </div>
+    </div>
+    <div>
+        <label for="validationCustom02" class="form-label">Idade</label>
+        <input type="number" class="form-control" id="validationCustom02" name="idade" [(ngModel)]="usuario.idade">
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="cadastrar()">Cadastrar</button>
+</form>
+<h2>Usuarios Cadastrados</h2>
+<hr>
+<table>
+    <tr>
+        <th>#Id</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Ações</th>
+    </tr>
+    <tr *ngFor="let usuario of usuarios">
+        <td>{{usuario.id}}</td>
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.idade}}</td>
+        <td>
+            <button (click)="atualizar(usuario.id)">Atualizar</button>
+            <button (click)="remover(usuario.id)">Remover</button>
+        </td>
+    </tr>
+</table>
+</div>
+-->
+
+<div class="container">
+    <header class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-2 rounded-bottom bg-white">
+        <a class="d-flex align-items-center col-md-3 mb-3 mb-md-0 text-dark text-decoration-none" routerLink="/inicio">
+            <img class="bi me-2" src="\assets\images\Isotipo-Spotlights-Preto.png" width="40">
+            <span class="fs-4 fw-bold">Spotlights</span>
+        </a>
+        <div class="col-12 col-md-auto mb-3 mb-md-0 justify-content-center">
+            <form class="w-100 me-5">
+                <input type="search" class="form-control" placeholder="Pesquisar" aria-label="Search">
+            </form>
+        </div>
+        <div class="col-md-3 text-end"> <!-- Botões login e cadastro -->
+            <div class="dropdown">
+                <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{substituir.nome}}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item" routerLink="/inicio">Início</a></li>
+                    <li><a class="dropdown-item" routerLink="/inicio/perfil">Perfil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" routerLink="/login">Sair</a></li>
+                </ul>
+              </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light rounded" aria-label="Navbar das classificações">
+        <div class="container-fluid d-flex justify-content-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#BarraNav" aria-controls="BarraNav" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="BarraNav">
+                <ul class="navbar-nav justify-content-evenly w-100">
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0" href="#">Visto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0" href="#">Vendo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0" href="#">Quero ver</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0" href="#">Abandonados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0" href="#">Guilty Pleasure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0" href="#">Favoritos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</div>
+
+<router-outlet></router-outlet>
